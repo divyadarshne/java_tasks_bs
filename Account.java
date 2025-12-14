@@ -1,12 +1,13 @@
  public abstract class Account {
-    int accountNumber;
-    String customerName;
-    double balance;
+    private int accountNumber;
+    private String customerName;
+    private double balance;
     public Account(int accountNumber, String customerName, double balance){
         this.accountNumber=accountNumber;
         this.customerName=customerName;
         this.balance=balance;
     }
+    
     public void deposit(double amount){
         balance+=amount;
         System.out.println("credited "+ accountNumber + " "+ amount);
@@ -20,18 +21,29 @@
 
     }
     public abstract String getAccountType();
-     
-     public static void main(String[] args) {
-        SavingsAccount sa = new SavingsAccount(101, "Divya", 5000);
-        CurrentAccount ca = new CurrentAccount(202, "ragu", 2000);
-    sa.displayAccountInfo();
-    sa.deposit(500);
-    sa.withdraw(1000);
+   
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
-    ca.displayAccountInfo();
-    ca.deposit(1000);
-    ca.withdraw(2000);
-    
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
 }
@@ -43,10 +55,10 @@ public SavingsAccount(int accountNumber, String customerName, double balance) {
     super(accountNumber, customerName, balance);
 }
 public void withdraw(double amount){
-    if(balance > (amount + MinBalance)){
-        balance-=amount;
+    if( getBalance() > (amount + MinBalance)){
+        setBalance(getBalance()- amount);
         System.out.println( "withdarwl amount: "+ amount);
-        System.out.println("balance after withdrawl: "+ balance);
+        System.out.println("balance after withdrawl: "+ getBalance());
     }
     else{
         System.out.println("The current balance is insuficient.");
@@ -64,9 +76,9 @@ public void withdraw(double amount){
     }
 
     public void withdraw(double amount){
-        balance-=amount;
+        setBalance(getBalance()- amount);
         System.out.println( "withdarwl amount: "+ amount);
-        System.out.println("balance after withdrawl: "+ balance);
+        System.out.println("balance after withdrawl: "+ getBalance());
     }
 
     public String getAccountType() {
