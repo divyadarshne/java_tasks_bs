@@ -1,7 +1,7 @@
-package src.banking.main;
-import src.banking.exceptions.InsufficientBalanceException;
-import src.banking.model.CurrentAccount;
-import src.banking.model.SavingsAccount;
+package banking.main;
+import banking.exceptions.InsufficientBalanceException;
+import banking.model.CurrentAccount;
+import banking.model.SavingsAccount;
 
 
 public class Main {

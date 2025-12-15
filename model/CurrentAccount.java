@@ -1,4 +1,4 @@
-package src.banking.model;
+package banking.model;
     
  public class CurrentAccount extends Account {
   
