@@ -1,5 +1,5 @@
-package banking.model;
-import banking.exceptions.InsufficientBalanceException;
+package model;
+import exceptions.InsufficientBalanceException;
 
  public abstract class Account {
     private int accountNumber;

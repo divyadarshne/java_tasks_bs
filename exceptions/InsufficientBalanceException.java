@@ -1,4 +1,4 @@
-package banking.exceptions;
+package exceptions;
 
 public class InsufficientBalanceException extends Exception {
     

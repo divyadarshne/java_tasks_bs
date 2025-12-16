@@ -1,6 +1,6 @@
-package banking.model;
+package model;
 
-import banking.exceptions.InsufficientBalanceException;
+import exceptions.InsufficientBalanceException;
 
 public class SavingsAccount extends Account {
      private final double MinBalance = 1000;

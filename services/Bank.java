@@ -1,7 +1,7 @@
-package banking.services;
+package services;
 import java.util.*;
 
-import banking.model.Account;
+import model.Account;
 
 public class Bank {
     private Map <Integer, Account> accounts = new HashMap<> ();
