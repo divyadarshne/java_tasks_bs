@@ -1,8 +1,8 @@
-package src.banking.model;
+package model;
 
 import exceptions.InsufficientBalanceException;
 
-public class SavingsAccount extends Acount {
+public class SavingsAccount extends Account {
      private final double MinBalance = 1000;
 
 public SavingsAccount(int accountNumber, String customerName, double balance) {

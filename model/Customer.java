@@ -1,4 +1,4 @@
-package banking.model;
+package model;
 class Customer{
     private int customerId;
     private String name;
